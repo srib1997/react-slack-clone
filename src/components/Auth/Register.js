@@ -16,7 +16,7 @@ class Register extends React.Component {
     usersRef: firebase.database().ref('users')
   }
 
-  isFormVailid = () => {
+  isFormValid = () => {
     let errors = []
     let error
 
@@ -60,7 +60,7 @@ class Register extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    if (this.isFormVailid()) {
+    if (this.isFormValid()) {
       this.setState({ errors: [], loading: true })
       firebase
         .auth()
@@ -116,7 +116,7 @@ class Register extends React.Component {
         <Grid.Column style={{ maxWidth: 450}}>
           <Header as="h1" icon color="orange" textAlign="center">
             <Icon name="puzzle piece" color="orange"/>
-            Register for DevChat
+            註冊用戶
           </Header>
           <Form onSubmit={this.handleSubmit} size="large">
             <Segment stacked>
@@ -167,16 +167,16 @@ class Register extends React.Component {
               disabled={loading} 
               className={loading ? 'loading' : ''} 
               color="orange" 
-              fluid size="large">Submit</Button>
+              fluid size="large">提交</Button>
             </Segment>
           </Form>
           {errors.length > 0 && (
             <Message error>
-              <h3>Error</h3>
+              <h3>錯誤</h3>
               {this.displayErrors(errors)}
             </Message>
           )}
-          <Message>Already a user?  <Link to="/login">login</Link></Message>
+          <Message> 已經是用戶？  <Link to="/login">登錄</Link></Message>
         </Grid.Column>
       </Grid>
     )
