@@ -55,7 +55,7 @@ class login extends React.Component {
         <Grid.Column style={{ maxWidth: 450}}>
           <Header as="h1" icon color="violet" textAlign="center">
             <Icon name="code branch" color="violet"/>
-            登錄DevChat
+            登錄BrainStone
           </Header>
           <Form onSubmit={this.handleSubmit} size="large">
             <Segment stacked>
