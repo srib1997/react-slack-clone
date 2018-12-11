@@ -3,11 +3,11 @@ import { Grid, Form, Segment, Button, Header, Message, Icon } from 'semantic-ui-
 import { Link } from 'react-router-dom'
 import firebase from '../../firebase'
 
-class login extends React.Component {
+class Login extends React.Component {
 
   state = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
     errors: [],
     loading: false,
   }
@@ -102,4 +102,4 @@ class login extends React.Component {
   }
 }
 
-export default login
+export default Login
